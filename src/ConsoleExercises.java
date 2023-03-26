@@ -18,6 +18,18 @@ public class ConsoleExercises {
         /**
          * System error when input is not integer*/
 
+        Scanner threeWordsInput = new Scanner(System.in);
+        System.out.print("Enter your first Word: ");
+        String userFirstWord = threeWordsInput.nextLine();
+
+        System.out.print("Enter your second Word: ");
+        String userSecondWord = threeWordsInput.nextLine();
+
+        System.out.print("Enter your third Word: ");
+        String userThirdWord = threeWordsInput.nextLine();
+
+        System.out.printf("The 3 words are: %s, %s, %s", userFirstWord, userSecondWord, userThirdWord);
+
 
 
 
