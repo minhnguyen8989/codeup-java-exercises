@@ -69,7 +69,11 @@ public class ControlFlowExercises {
                 String confirmInput = confirm2Continue.nextLine();
                 boolean confirmation = confirmInput.toLowerCase().equals("y");
                 if (confirmation){
-                    System.out.println("Your letter garde is: A");
+                    if (userGradeInputed >= 99){
+                        System.out.println("Your letter garde is: A+");
+                    } else {
+                        System.out.println("Your letter garde is: A");
+                    }
                 } else {
                     System.out.println("Thank you!");
                 }
@@ -80,7 +84,11 @@ public class ControlFlowExercises {
                 String confirmInput = confirm2Continue.nextLine();
                 boolean confirmation = confirmInput.toLowerCase().equals("y");
                 if (confirmation){
-                    System.out.println("Your letter garde is: B");
+                    if (userGradeInputed >= 86){
+                        System.out.println("Your letter garde is: B+");
+                    } else {
+                        System.out.println("Your letter garde is: B");
+                    }
                 } else {
                     System.out.println("Thank you!");
                 }
@@ -91,7 +99,11 @@ public class ControlFlowExercises {
                 String confirmInput = confirm2Continue.nextLine();
                 boolean confirmation = confirmInput.toLowerCase().equals("y");
                 if (confirmation){
-                    System.out.println("Your letter garde is: C");
+                    if (userGradeInputed >= 78){
+                        System.out.println("Your letter garde is: C+");
+                    } else {
+                        System.out.println("Your letter garde is: C");
+                    }
                 } else {
                     System.out.println("Thank you!");
                 }
@@ -102,7 +114,11 @@ public class ControlFlowExercises {
                 String confirmInput = confirm2Continue.nextLine();
                 boolean confirmation = confirmInput.toLowerCase().equals("y");
                 if (confirmation){
-                    System.out.println("Your letter garde is: D");
+                    if (userGradeInputed >= 65){
+                        System.out.println("Your letter garde is: D+");
+                    } else {
+                        System.out.println("Your letter garde is: D");
+                    }
                 } else {
                     System.out.println("Thank you!");
                 }
@@ -113,18 +129,22 @@ public class ControlFlowExercises {
                 String confirmInput = confirm2Continue.nextLine();
                 boolean confirmation = confirmInput.toLowerCase().equals("y");
                 if (confirmation){
-                    System.out.println("Your letter garde is: F");
+                    if (userGradeInputed >= 58){
+                        System.out.println("Your letter garde is: F+");
+                    } else {
+                        System.out.println("Your letter garde is: F");
+                    }
                 } else {
                     System.out.println("Thank you!");
                 }
                 break;
+            } else {
+                System.out.println("Your input is not valid! Bye!");
             }
         } while (userGradeInputed <= 100 && userGradeInputed >= 0);
 
 
 
-//        else {
-//            System.out.println("Your input is not valid");
-//        }
+
     }
 }
