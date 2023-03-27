@@ -44,16 +44,87 @@ public class ControlFlowExercises {
         }
 
         //Display a table of powers
-        int defaultNum = 1;
-        Scanner userIntInput = new Scanner(System.in);
-        System.out.println("What number would you like to go up to? ");
-        int userNumInputed = userIntInput.nextInt();
-        do {
-            System.out.println("number |  squared  |  cubed");
-            System.out.println("------ |  -------  |  -----");
-            System.out.println(defaultNum + "     | " + (defaultNum*defaultNum) + "     | " + ((defaultNum*defaultNum)*defaultNum));
-            defaultNum++;
-        } while (defaultNum <= userNumInputed);
+//        int defaultNum = 1;
+//        Scanner userIntInput = new Scanner(System.in);
+//        System.out.print("What number would you like to go up to? ");
+//        int userNumInputed = userIntInput.nextInt();
+//        System.out.println("Here is your table!");
+//        System.out.println("number |  squared  |  cubed");
+//        System.out.println("------ |  -------  |  -----");
+//        do {
+//            System.out.println(defaultNum + "      | " + (defaultNum*defaultNum) + "        | " + ((defaultNum*defaultNum)*defaultNum));
+//            defaultNum++;
+//        } while (defaultNum <= userNumInputed);
 
+
+
+        //Convert given number grades into grades
+        Scanner userGradeInput = new Scanner(System.in);
+        System.out.print("Enter numerical grade from 0 to 100: ");
+        int userGradeInputed = userGradeInput.nextInt();
+        do {
+            if ( userGradeInputed <= 100 && userGradeInputed >= 88){
+                Scanner confirm2Continue = new Scanner(System.in);
+                System.out.print("Are you sure to continue? Y/N ");
+                String confirmInput = confirm2Continue.nextLine();
+                boolean confirmation = confirmInput.toLowerCase().equals("y");
+                if (confirmation){
+                    System.out.println("Your letter garde is: A");
+                } else {
+                    System.out.println("Thank you!");
+                }
+                break;
+            } else if (userGradeInputed <= 87 && userGradeInputed >= 80) {
+                Scanner confirm2Continue = new Scanner(System.in);
+                System.out.print("Are you sure to continue? Y/N ");
+                String confirmInput = confirm2Continue.nextLine();
+                boolean confirmation = confirmInput.toLowerCase().equals("y");
+                if (confirmation){
+                    System.out.println("Your letter garde is: B");
+                } else {
+                    System.out.println("Thank you!");
+                }
+                break;
+            } else if (userGradeInputed <= 79 && userGradeInputed >= 67) {
+                Scanner confirm2Continue = new Scanner(System.in);
+                System.out.print("Are you sure to continue? Y/N ");
+                String confirmInput = confirm2Continue.nextLine();
+                boolean confirmation = confirmInput.toLowerCase().equals("y");
+                if (confirmation){
+                    System.out.println("Your letter garde is: C");
+                } else {
+                    System.out.println("Thank you!");
+                }
+                break;
+            } else if (userGradeInputed <= 66 && userGradeInputed >= 60) {
+                Scanner confirm2Continue = new Scanner(System.in);
+                System.out.print("Are you sure to continue? Y/N ");
+                String confirmInput = confirm2Continue.nextLine();
+                boolean confirmation = confirmInput.toLowerCase().equals("y");
+                if (confirmation){
+                    System.out.println("Your letter garde is: D");
+                } else {
+                    System.out.println("Thank you!");
+                }
+                break;
+            } else if(userGradeInputed <= 59 && userGradeInputed >= 0){
+                Scanner confirm2Continue = new Scanner(System.in);
+                System.out.print("Are you sure to continue? Y/N ");
+                String confirmInput = confirm2Continue.nextLine();
+                boolean confirmation = confirmInput.toLowerCase().equals("y");
+                if (confirmation){
+                    System.out.println("Your letter garde is: F");
+                } else {
+                    System.out.println("Thank you!");
+                }
+                break;
+            }
+        } while (userGradeInputed <= 100 && userGradeInputed >= 0);
+
+
+
+//        else {
+//            System.out.println("Your input is not valid");
+//        }
     }
 }
