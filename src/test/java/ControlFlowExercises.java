@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
 
     public static void main(String[] args) {
@@ -31,14 +33,27 @@ public class ControlFlowExercises {
         //FizzBuzz Test
         for (int i = 1; i <= 100; i++){
             if (i % 3 == 0 && i % 5 == 0){
-                System.out.println(i + " is multiples of 3 and 5");
+                System.out.println(i + " FizzBuzz");
             } else if (i % 5 == 0) {
-                System.out.println(i + " is multiples of 5");
+                System.out.println(i + " Buzz");
             } else if (i % 3 == 0){
-                System.out.println(i + " is multiples of 3");
+                System.out.println(i + " Fizz");
             } else {
                 System.out.println(i);
             }
         }
+
+        //Display a table of powers
+        int defaultNum = 1;
+        Scanner userIntInput = new Scanner(System.in);
+        System.out.println("What number would you like to go up to? ");
+        int userNumInputed = userIntInput.nextInt();
+        do {
+            System.out.println("number |  squared  |  cubed");
+            System.out.println("------ |  -------  |  -----");
+            System.out.println(defaultNum + "     | " + (defaultNum*defaultNum) + "     | " + ((defaultNum*defaultNum)*defaultNum));
+            defaultNum++;
+        } while (defaultNum <= userNumInputed);
+
     }
 }
