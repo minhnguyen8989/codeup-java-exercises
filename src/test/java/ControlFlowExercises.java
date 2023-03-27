@@ -144,7 +144,5 @@ public class ControlFlowExercises {
         } while (userGradeInputed <= 100 && userGradeInputed >= 0);
 
 
-
-
     }
 }
