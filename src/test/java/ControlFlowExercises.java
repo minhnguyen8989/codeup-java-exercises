@@ -26,5 +26,19 @@ public class ControlFlowExercises {
         for (long i = 2; i < 1000000; i*=i){
             System.out.println(i);
         }
+
+
+        //FizzBuzz Test
+        for (int i = 1; i <= 100; i++){
+            if (i % 3 == 0 && i % 5 == 0){
+                System.out.println(i + " is multiples of 3 and 5");
+            } else if (i % 5 == 0) {
+                System.out.println(i + " is multiples of 5");
+            } else if (i % 3 == 0){
+                System.out.println(i + " is multiples of 3");
+            } else {
+                System.out.println(i);
+            }
+        }
     }
 }
