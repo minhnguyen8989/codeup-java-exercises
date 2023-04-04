@@ -24,7 +24,6 @@ public class ArraysExercises {
         String newName = scanName.nextLine();
 
         return newName;
-
     }
 
 }
