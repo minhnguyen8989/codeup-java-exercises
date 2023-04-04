@@ -3,14 +3,17 @@ package Shapes;
 public class ShapesTest {
     public static void main(String[] args) {
 
-        Square theSquare = new Square (5);
-        Rectangle theRectangle = new Rectangle(9, 5);
+        Measurable myShape;
 
-        System.out.printf("The Area of Square is: %s %n", theSquare.getArea());
-        System.out.printf("The Perimeter of Square is: %s %n", theSquare.getPerimeter());
+        myShape = new Rectangle(9,5);
+        myShape = new Square(5);
 
-        System.out.printf("The Perimeter of Rectangle is: %s %n", theRectangle.getPerimeter());
-        System.out.printf("The Perimeter of Area is: %s %n", theRectangle.getArea());
+
+        System.out.printf("The Area of Square is: %s %n", myShape.getArea());
+        System.out.printf("The Perimeter of Square is: %s %n", myShape.getPerimeter());
+
+        System.out.printf("The Perimeter of Rectangle is: %s %n", myShape.getPerimeter());
+        System.out.printf("The Perimeter of Area is: %s %n", myShape.getArea());
 
 
 
