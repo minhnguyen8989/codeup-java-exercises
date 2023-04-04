@@ -1,5 +1,6 @@
 package Array;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class ArraysExercises {
     public static void main(String[] args) {
@@ -12,11 +13,19 @@ public class ArraysExercises {
             System.out.println(Person);
         }
 
-
-
+        Persons = Arrays.copyOf(Persons, Persons.length +1);
+        Persons[Persons.length -1] = addPerson();
+        System.out.println(Arrays.toString(Persons));
     }
 
+    public static String addPerson(){
+        Scanner scanName = new Scanner(System.in);
+        System.out.print("Enter new name: ");
+        String newName = scanName.nextLine();
 
+        return newName;
+
+    }
 
 }
 
