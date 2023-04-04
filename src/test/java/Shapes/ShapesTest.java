@@ -6,14 +6,14 @@ public class ShapesTest {
         Measurable myShape;
 
         myShape = new Rectangle(9,5);
+        System.out.printf("The Perimeter of Rectangle is: %s %n", myShape.getPerimeter());
+        System.out.printf("The Perimeter of Area is: %s %n", myShape.getArea());
+
         myShape = new Square(5);
-
-
         System.out.printf("The Area of Square is: %s %n", myShape.getArea());
         System.out.printf("The Perimeter of Square is: %s %n", myShape.getPerimeter());
 
-        System.out.printf("The Perimeter of Rectangle is: %s %n", myShape.getPerimeter());
-        System.out.printf("The Perimeter of Area is: %s %n", myShape.getArea());
+
 
 
 
