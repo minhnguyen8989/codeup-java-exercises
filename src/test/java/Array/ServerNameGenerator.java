@@ -1,16 +1,16 @@
 package Array;
 
 public class ServerNameGenerator {
-    private String[] adjectives = {"happy", "sad", "angry", "funny", "silly"};
-    private String[] nouns = {"dog", "cat", "bird", "snake", "hamster"};
+    private static String[] adjectives = {"happy", "sad", "angry", "funny", "silly"};
+    private static String[] nouns = {"dog", "cat", "bird", "snake", "hamster"};
 
     public static String randomAdjective(){
-        int randomIndex = (int) Math.floor(Math.random() * 5);
-        return randomAdjective()
+        int randomIndex = (int) Math.floor(Math.random() * adjectives.length);
+        return adjectives[randomIndex];
     }
 
     public static String randomNouns(){
-        int randomIndex = (int) Math.floor(Math.random() * 5);
+        int randomIndex = (int) Math.floor(Math.random() * adjectives.length);
         return nouns[randomIndex];
     }
 
