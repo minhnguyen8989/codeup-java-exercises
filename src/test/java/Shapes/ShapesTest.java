@@ -13,10 +13,6 @@ public class ShapesTest {
         System.out.printf("The Area of Square is: %s %n", myShape.getArea());
         System.out.printf("The Perimeter of Square is: %s %n", myShape.getPerimeter());
 
-
-
-
-
     }
 
 }
