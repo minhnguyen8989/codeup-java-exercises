@@ -2,7 +2,7 @@ package grades;
 
 import java.util.ArrayList;
 
-public class Student {
+public class Student implements CLI_interface {
     private String name;
     private ArrayList<Integer> grades = new ArrayList<>();
 
