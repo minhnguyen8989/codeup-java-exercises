@@ -33,48 +33,38 @@ public class GradesApplication {
         Devil.addGrade(97);
         Devil.addGrade(91);
 
+        Scanner objectScanner = new Scanner(System.in);
+
+        boolean validUser = true;
+
         System.out.println("Welcome!");
         System.out.println("Here are the Github usernames of our students: ");
-        System.out.println("|superRyan|  |wonderOlive|  |BestLeon|    |NeverDevil|");
-
-
-        Scanner objectScanner = new Scanner(System.in);
-        System.out.println("What student would you like to see more information on? ");
-        String userChoice = objectScanner.nextLine();
-
-        boolean confirmation = true;
-
-        switch (userChoice) {
-            case "superRyan":
-                System.out.printf("Name: %s - GitHub Username: %s %n", students.get(userChoice), userChoice);
-                System.out.printf("Current Average: %s", Ryan.getGradeAverage());
-                break;
-
-            case "wonderOlive":
-                System.out.printf("Name: %s - GitHub Username: %s %n", students.get(userChoice), userChoice);
-                System.out.printf("Current Average: %s", Olive.getGradeAverage());
-                break;
-
-            case "BestLeon":
-                System.out.printf("Name: %s - GitHub Username: %s %n", students.get(userChoice), userChoice);
-                System.out.printf("Current Average: %s", Leon.getGradeAverage());
-                break;
-
-            case "NeverDevil":
-                System.out.printf("Name: %s - GitHub Username: %s %n", students.get(userChoice), userChoice);
-                System.out.printf("Current Average: %s", Devil.getGradeAverage());
-                break;
-
-            default:
-                System.out.printf("Sorry, no student found with the GitHub username of \"%s\" %n%n",userChoice);
-
-                Scanner objectScanner = new Scanner(System.in);
-                System.out.println("Would you like to see another student? <y/N>");
-                String userConfirm = objectScanner.nextLine();
-
-
+        for (String userName : students.keySet()) {
+            System.out.print(userName + " | ");
         }
 
-    }
+        do {
+            System.out.printf("%nWhat student would you like to see more information on? ");
+            String userChoice = objectScanner.nextLine();
 
+            if (students.containsKey(userChoice)){
+                do {
+                    System.out.println("----------------------------");
+                    System.out.printf("Name: %s - GitHub Username: %s %n", students.get(userChoice), userChoice);
+                    System.out.printf("Current Average: %s %n", Ryan.getGradeAverage());
+                    System.out.println("----------------------------");
+                    System.out.println("Would you like to see another student? <y/N>");
+                    String userReChoice = objectScanner.nextLine();
+                } while ();
+
+            } else {
+                System.out.printf("Sorry, no student found with the GitHub username of \"%s\" %n%n",userChoice);
+                System.out.println("Would you like to see another student? <y/N>");
+                String userReChoice = objectScanner.nextLine();
+
+            }
+
+        } while (validUser);
+
+    }
 }
